@@ -4,8 +4,8 @@ int find_word(char *s,char *w);
 
 int main(int argc, const char *argv[])
 {
-    char str1[20]="This is a Game !";
-    char str2[20]="a";
+    char str1[20]="This is a my Game !";
+    char str2[20]="is";
     int num =find_word(str1,str2);
     if (num<0) 
     {
@@ -26,6 +26,10 @@ int find_word(char *s,char *w)
     int i=0;
     while(s[i]!='\0')
     {
+//////////////////////////////////////////
+//strcmp就是比较一次
+//strncmp+strlen（）比较多次是否出现相同的字符。
+/////////////////////////////////////////
         if (strncmp(s+i,w,strlen(w))==0) 
         {   
             return i;
